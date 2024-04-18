@@ -8,10 +8,14 @@ namespace InputController
     {
         private static void Main(string[] args)
         {
-            InputController.SendSingleToMouse(DWFlags.MOUSEEVENTF_LEFTDOWN);
-            InputController.SendSingleToMouse(DWFlags.MOUSEEVENTF_LEFTUP);
-            
+            InputController.SendOneToMouse(DWFlags.MOUSEEVENTF_LEFTDOWN);
+            InputController.SendOneToMouse(DWFlags.MOUSEEVENTF_LEFTUP);
 
+            InputController.SendOneToKeyboard(KeyCode.B);
+
+            var input1 = 
+
+            Console.ReadLine();
         }
     }
 
