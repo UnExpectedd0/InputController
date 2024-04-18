@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace InputController
 {
+
     [StructLayout(LayoutKind.Sequential)]
     public struct MouseInput
     {
@@ -96,6 +97,11 @@ namespace InputController
         MOUSEEVENTF_MOVE_NOCOALESCE = 0x2000,
         MOUSEEVENTF_VIRTUALDESK = 0x4000,
         MOUSEEVENTF_ABSOLUTE = 0x8000,
+        KEYEVENTF_EXTENDEDKEY = 0x0001,
+        KEYEVENTF_KEYUP = 0x0002,
+        KEYEVENTF_UNICODE = 0x0004,
+        KEYEVENTF_SCANCODE = 0x0008,
+
     }
 
     public enum KeyCode : ushort
