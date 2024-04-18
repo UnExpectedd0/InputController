@@ -13,12 +13,7 @@ namespace InputController
 
         public static uint SendOneToMouse(DWFlags _flags)
         {
-            LPInput input = new LPInput()
-            {
-                type = DWType.INPUT_MOUSE,
-                data = new InputUnion(_flags)
-            };
-
+            LPInput input = new LPInput(_flags);
             LPInput[] inputs = { input };
             
             return SendInput(1, inputs, Marshal.SizeOf(typeof(LPInput)));
@@ -26,12 +21,7 @@ namespace InputController
 
         public static uint SendOneToKeyboard(KeyCode _virtualKeyCode)
         {
-            LPInput input = new LPInput()
-            {
-                type = DWType.INPUT_KEYBOARD,
-                data = new InputUnion(_virtualKeyCode)
-            };
-
+            LPInput input = new LPInput(_virtualKeyCode);
             LPInput[] inputs = { input };
             
             return SendInput(1, inputs, Marshal.SizeOf(typeof(LPInput)));
