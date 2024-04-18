@@ -13,7 +13,6 @@ namespace InputController
 
             InputController.SendOneToKeyboard(KeyCode.B);
 
-            var input1 = 
 
             Console.ReadLine();
         }
